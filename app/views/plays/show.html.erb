@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @play.title %>
+</p>
+
+<p>
+  <strong>Playwright:</strong>
+  <%= @play.playwright %>
+</p>
+
+<p>
+  <strong>Year of Release:</strong>
+  <%= @play.year_of_release %>
+</p>
+
+<p>
+  <strong>Male Roles:</strong>
+  <%= @play.male_roles %>
+</p>
+
+<p>
+  <strong>Female Roles:</strong>
+  <%= @play.female_roles %>
+</p>
+
+<p>
+  <strong>Total Roles:</strong>
+  <%= @play.total_roles %>
+</p>
+
+<p>
+  <strong>Musical:</strong>
+  <%= @play.musical %>
+</p>
+
+<p>
+  <strong>Comedy:</strong>
+  <%= @play.comedy %>
+</p>
+
+<%= link_to 'Edit', edit_play_path(@play) %> |
+<%= link_to 'Back', plays_path %>
+</br>
+<%= link_to 'View All Plays', plays_path %>

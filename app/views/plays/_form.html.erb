@@ -1,0 +1,57 @@
+<%= form_with(model: play, local: true) do |form| %>
+  <% if play.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(play.errors.count, "error") %> prohibited this play from being saved:</h2>
+
+      <ul>
+      <% play.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :play_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :playwright %>
+    <%= form.text_field :playwright, id: :play_playwright %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_of_release %>
+    <%= form.text_field :year_of_release, id: :play_year_of_release %>
+  </div>
+
+  <div class="field">
+    <%= form.label :male_roles %>
+    <%= form.number_field :male_roles, id: :play_male_roles %>
+  </div>
+
+  <div class="field">
+    <%= form.label :female_roles %>
+    <%= form.number_field :female_roles, id: :play_female_roles %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_roles %>
+    <%= form.number_field :total_roles, id: :play_total_roles %>
+  </div>
+
+  <div class="field">
+    <%= form.label :musical %>
+    <%= form.check_box :musical, id: :play_musical %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comedy %>
+    <%= form.check_box :comedy, id: :play_comedy %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

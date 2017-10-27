@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  play_id: 1
+  theater: MyString
+  zip_code: 1
+  opening: 2017-10-27
+  closing: 2017-10-27
+  production_notes: MyText
+
+two:
+  play_id: 1
+  theater: MyString
+  zip_code: 1
+  opening: 2017-10-27
+  closing: 2017-10-27
+  production_notes: MyText
