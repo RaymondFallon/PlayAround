@@ -2,7 +2,7 @@
 
 <p>
   <strong>Play:</strong>
-  <%= @production.play_name %>
+  <%= @production.play.title %>
 </p>
 
 <p>
@@ -12,7 +12,7 @@
 
 <p>
   <strong>Zip code:</strong>
-  <%= @production.zip_code %>
+  <%= @production.zipcode %>
 </p>
 
 <p>
@@ -32,3 +32,4 @@
 
 <%= link_to 'Edit', edit_production_path(@production) %> |
 <%= link_to 'Back', productions_path %>
+

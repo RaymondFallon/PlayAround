@@ -9,14 +9,14 @@
   </head>
 
   <body>
-    <span style="text-align: right">
-      <% form_tag "/plays/search" do %>
-        <%= text_field_tag :search_string %>
-        <%= submit_tag "Search" %>
-      <% end %>
-    </span>
+    <h1>HI</h1>
+    <div class="headcard">
+   
+    </div>
 
-    <p style="color: blue"><%= flash[:notice] %></p>
-    <%= yield %>
+
+    <div id="content">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -32,12 +32,20 @@
 
 <p>
   <strong>Musical:</strong>
-  <%= @play.musical %>
+  <% if @play.musical %>
+    Yes
+  <% else %>
+    No
+  <% end %>
 </p>
 
 <p>
   <strong>Comedy:</strong>
-  <%= @play.comedy %>
+  <% if @play.comedy %>
+    Yes
+  <% else %>
+    No
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_play_path(@play) %> |
@@ -45,4 +53,6 @@
 </br>
 <%= link_to 'View All Plays', plays_path %>
 </br>
-<%= link_to 'Add a Production of this Play!', new_production_path(@play) %>
+
+<%= render :partial=>"new_production", :locals=>{:production=>Production.new(:play_id=>@play.id)} %>
+

@@ -69,6 +69,6 @@ class ProductionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def production_params
-      params.require(:production).permit(:play_id, :theater, :zip_code, :opening, :closing, :production_notes)
+      params.require(:production).permit(:play_id, :theater, :zipcode, :opening, :closing, :production_notes)
     end
 end
