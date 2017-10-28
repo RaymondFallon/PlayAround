@@ -38,7 +38,6 @@
 
 .headcard a {
     text-decoration: none;
-    text-size: 40px;
     font-size: 40px;
 }  
 
@@ -56,6 +55,10 @@
 .head_prods {
     float: right;
     width: 100px;
+}
+
+.search_bar {
+    display: in-line;
 }
 
 .content {

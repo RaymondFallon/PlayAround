@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PLAYAround</title>
+    <title>PlayAround</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,11 +13,20 @@
       <a href="/plays/">Plays</a>
       <img src="/drama_masks.png" height="60px">
       <a href="/productions/">Productions</a>
+      <span id="search_bar">
+        <%= form_tag "/plays/search" do %>
+          <%= text_field_tag :search_string, "Search by Author/Playwright" %>
+          <%= submit_tag "Search" %>
+        <% end %>
+      </span>
+      
     </div>
-
-
+    
+    <div id="padding"></div>
+    <p style="color: blue"><%= flash[:notice] %></p>
+    </br>
     <div id="content">
-      <%= yield %>
+    <%= yield %>
     </div>
   </body>
 </html>

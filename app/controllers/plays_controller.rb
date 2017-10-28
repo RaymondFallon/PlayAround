@@ -21,6 +21,17 @@ class PlaysController < ApplicationController
   def edit
   end
 
+  def search
+    @plays = []
+    Play.find_each do |p|
+      if p.title.downcase.include? params[:search_string].downcase 
+        @plays.push(p)
+      elsif p.playwright.downcase.include? params[:search_string].downcase 
+        @plays.push(p)
+      end
+    end
+  end
+
   # POST /plays
   # POST /plays.json
   def create

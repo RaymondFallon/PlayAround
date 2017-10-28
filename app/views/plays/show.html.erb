@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
-
+</br>
 <p>
-  <strong>Title:</strong>
+  <h2>
   <%= @play.title %>
+  </h2>
 </p>
 
 <p>
@@ -51,8 +52,7 @@
 <%= link_to 'Edit', edit_play_path(@play) %> |
 <%= link_to 'Back', plays_path %>
 </br>
-<%= link_to 'View All Plays', plays_path %>
-</br>
+<h2>Add a new Production of this show:</h2>
 
 <%= render :partial=>"new_production", :locals=>{:production=>Production.new(:play_id=>@play.id)} %>
 
