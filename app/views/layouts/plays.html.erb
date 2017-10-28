@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PlayAround</title>
+    <title>pLayAround</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,14 +9,21 @@
   </head>
 
   <body>
+    <div class="headcard">
+      <a href="/plays/">Plays</a>
+      <img src="/drama_masks.png" height="60px">
+      <a href="/productions/">Productions</a>
+    </div>
     <span style="text-align: right">
       <% form_tag "/plays/search" do %>
         <%= text_field_tag :search_string %>
         <%= submit_tag "Search" %>
       <% end %>
     </span>
-
+    <div id="padding"></div>
     <p style="color: blue"><%= flash[:notice] %></p>
+    <div id="content">
     <%= yield %>
+    </div>
   </body>
 </html>
