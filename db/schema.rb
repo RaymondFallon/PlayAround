@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171027201500) do
+ActiveRecord::Schema.define(version: 20171027213420) do
 
   create_table "plays", force: :cascade do |t|
     t.string "title"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20171027201500) do
     t.text "production_notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "play_name"
   end
 
 end
