@@ -4,7 +4,7 @@ class ProductionsController < ApplicationController
   # GET /productions
   # GET /productions.json
   def index
-    @productions = Production.all
+    @productions = Production.order("closing desc")
   end
 
   # GET /productions/1

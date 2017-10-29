@@ -8,8 +8,7 @@
       <th>Play</th>
       <th>Theater</th>
       <th>Zip code</th>
-      <th>Opening</th>
-      <th>Closing</th>
+      <th>Year</th>
       <th>Production notes</th>
       <th colspan="3"></th>
     </tr>
@@ -21,8 +20,7 @@
         <td><%= production.play.title %></td>
         <td><%= production.theater %></td>
         <td><%= production.zipcode %></td>
-        <td><%= production.opening %></td>
-        <td><%= production.closing %></td>
+        <td><%= production.closing.year %></td>
         <td><%= production.production_notes %></td>
         <td><%= link_to 'Show', production %></td>
         <td><%= link_to 'Edit', edit_production_path(production) %></td>

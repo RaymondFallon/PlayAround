@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :play_name %>
-    <%= form.number_field :play_name, id: :production_play_name %>
+    <h2><%= @production.play.title</h2>
   </div>
 
   <div class="field">
@@ -22,8 +21,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :zip_code %>
-    <%= form.number_field :zip_code, id: :production_zip_code %>
+    <%= form.label :zipcode %>
+    <%= form.text_field :zipcode, id: :production_zipcode %>
   </div>
 
   <div class="field">

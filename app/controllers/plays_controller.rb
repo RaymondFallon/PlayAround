@@ -4,7 +4,7 @@ class PlaysController < ApplicationController
   # GET /plays
   # GET /plays.json
   def index
-    @plays = Play.all
+    @plays = Play.order("title")
   end
 
   # GET /plays/1
