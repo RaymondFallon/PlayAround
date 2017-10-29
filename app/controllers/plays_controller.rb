@@ -32,6 +32,15 @@ class PlaysController < ApplicationController
     end
   end
 
+  def get_prods(play)
+    @prods = []
+    Production.find_each do |prod|
+      if prod.play_id == play.id
+        @prods.push(prod)
+      end
+    end
+  end
+
   # POST /plays
   # POST /plays.json
   def create

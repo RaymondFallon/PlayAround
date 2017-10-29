@@ -21,6 +21,10 @@ class ProductionsController < ApplicationController
   def edit
   end
 
+  def list
+    @play
+  end
+
   # POST /productions
   # POST /productions.json
   def create

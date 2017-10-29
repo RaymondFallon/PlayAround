@@ -52,6 +52,12 @@
 <%= link_to 'Edit', edit_play_path(@play) %> |
 <%= link_to 'Back', plays_path %>
 </br>
+
+<div id=list_prods>
+  <%= render :partial=>"prod_list", :locals=>{:productions=>Production.where(play_id: @play.id)} %>
+</div>
+
+
 <h2>Add a new Production of this show:</h2>
 
 <%= render :partial=>"new_production", :locals=>{:production=>Production.new(:play_id=>@play.id)} %>
